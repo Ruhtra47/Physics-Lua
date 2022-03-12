@@ -4,7 +4,7 @@ WINDOW_HEIGHT = 720
 function love.load()
     love.physics.setMeter(64)
     world = love.physics.newWorld(0, 9.81 * 64, true)
-    gravity = 400
+    gravity = 200
 
     objects = {}
 
@@ -57,7 +57,7 @@ function love.update(dt)
 
     if grounded then
         if love.keyboard.isDown('up') or love.keyboard.isDown('w') then
-            objects.player.body:applyLinearImpulse(0, -400)
+            objects.player.body:applyLinearImpulse(0, -300)
         end
     end
 
